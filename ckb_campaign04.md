@@ -23,6 +23,23 @@ The Create Digital Object accepted two parameters which were visible from the dA
 ![Rendered_Image](./DOB_Images/DOB_Rendered_image.png)<br>With the **Spore Cell** of the digital object and after decoding its content the image gets to be rendered in the browser as shown.The **cccClient.getCellLive** will enable the getting of the **liveCell** of the digital object decoded to be rendered.If the cell is null, it returns the following alert message<br><br>![cell not found](./DOB_Images/cell_notFound.png)
 
 ## Deploying the app to Testnet
+### Testnet error
 Switched to the testnet **NETWORK** and came across this error when i tried to create the Digital Object after i had uploaded an mage locally.![testnet error](./DOB_Images/testnet_error.png)<br>I realised this was caused by insufficient faucets and i had to fund my testnet address for a successful encoding of the image before being stored on-chain.
+Generated an address after refrencing from [Generate Address for Testnet](https://docs.nervos.org/docs/ckb-fundamentals/ckb-address) deployment funded the address by obtaining Testnet faucets from  **[Faucets](https://faucet.nervos.org/)** .I changed the private key i was using for devnet inside  the **index.tsx** file to the private key matching the address funded for testnet; which later reflected as the private key after running the app.<br>
 
+### Testnet successful Run
+This was the successful run on **testnet** after having a private key for a funded address.The faucets to **Create the DOB** onchain after the image upload was way alot,it wanted me to fund it more than 100,000 tesnet faucets before the **tx hash** for the **Create DOB** was established and stored on-chain.<br>
+![testnet deployment](./DOB_Images/testnet_rundApp.png)
+
+## Key Learnings
+1. **Spore**: an on-chain digital-object(DOB) protocol backed by the CKB that enables secure, efficient, and flexible creation and transfer of digital objects. Its use cases are mainly:
+ - Non-fungible Tokens (NFTs)
+ - Digital collectibles
+ - Gaming assets
+ -  Redeemable digital vouchers or certificates
+ 2. **Intrinsic Value & Redemption**:Every Spore is backed by locked CKB. This provides a guaranteed minimum floor value. Unlike EVM burning, "melting" a Spore destroys the object but returns the exact locked CKB to the creator.Redemption of Intrinsic value ensures the melting back of spores to the underlying CKBytes achieved by **meltsSpore** API that is provided by the **spore-sdk**.
+ - **[Spore-SDK](https://github.com/sporeprotocol/spore-sdk)**- Is the Software development kit used to interact with the Spore protocol specifically designed for seamless integration with Spore, an on-chain asset protocol to power digital asset ownership, distribution, and value capture.
+3. **Fully On-Chain Storage**: Spore content (images, JSON, Lua scripts) and MIME types are stored directly in the cell's data field using Molecule serialization, completely eliminating reliance on IPFS or external servers.
+4. **Zero-Fee Transfers**: Because the Spore cell carries its own state rent (capacity), it is self-funded. Users do not need CKB to receive a Spore.
+5. **Supports Mutliple Content Types**: The Spore protocol suports a wide range of digital content formats(images like JPEGs) enabling flexibility for developers to store diverse media types and data directly on-chain.
 
