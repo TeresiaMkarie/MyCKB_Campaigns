@@ -10,12 +10,12 @@
 
 ## Issues During Build
 
-When building the contract I discovered that you need a `CKB degugger` running the environment locally is not only enough.I ran with a code1: ``ckb-debugger:command not Found``<br>
+When building the contract I discovered that you need a `CKB debugger` running the environment locally is not only enough.I ran with a code1: ``ckb-debugger:command not Found``<br>
 ![build error](../campaign3/pictures/hash_error.png)
 
 ## How I Fixed the Issue.
 
-Referenced from -**[Debug with CKB-Debugger](https://docs.nervos.org/docs/script/rust/rust-debug#debug-with-ckb-debugger)** :First, I installed CKB-Debugger using cargo.I learnt that th CKB-Debugger was a powerful standalone command-line tool designed for offchain script development.With the CKB-Debugger, I efficiently identified and resolved issues in my Scripts, ensuring smooth execution.The build was a success!<br>
+Referenced from -**[Debug with CKB-Debugger](https://docs.nervos.org/docs/script/rust/rust-debug#debug-with-ckb-debugger)** :First, I installed CKB-Debugger using cargo.I learnt that the CKB-Debugger was a powerful standalone command-line tool designed for offchain script development.With the CKB-Debugger, I efficiently identified and resolved issues in my Scripts, ensuring smooth execution.The build was a success!<br>
 ![build success](../campaign3/pictures/hashlock_build.png)
 
 ### Deployment of the Contract
