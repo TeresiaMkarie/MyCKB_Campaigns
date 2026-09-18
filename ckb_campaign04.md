@@ -24,7 +24,7 @@ The Create Digital Object accepted two parameters which were visible from the dA
 
 ## Deploying the app to Testnet
 ### Testnet error
-Switched to the testnet **NETWORK** and came across this error when i tried to create the Digital Object after i had uploaded an mage locally.![testnet error](./DOB_Images/testnet_error.png)<br>I realised this was caused by insufficient faucets and i had to fund my testnet address for a successful encoding of the image before being stored on-chain.
+Switched to the testnet **NETWORK** and came across this error when i tried to create the Digital Object after i had uploaded an image locally.![testnet error](./DOB_Images/testnet_error.png)<br>I realised this was caused by insufficient faucets and i had to fund my testnet address for a successful encoding of the image before being stored on-chain.
 Generated an address after refrencing from [Generate Address for Testnet](https://docs.nervos.org/docs/ckb-fundamentals/ckb-address) deployment funded the address by obtaining Testnet faucets from  **[Faucets](https://faucet.nervos.org/)** .I changed the private key i was using for devnet inside  the **index.tsx** file to the private key matching the address funded for testnet; which later reflected as the private key after running the app.<br>
 
 ### Testnet successful Run
