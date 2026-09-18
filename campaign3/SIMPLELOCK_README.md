@@ -29,7 +29,7 @@ After Building and Complilation,discovered that the contract files now became av
 I deployed the script in the devnet network and noticed that the contract files were now available in the `simple-lock/dist directory`.I discovered that i needed to have a pre-funded account to obtain a private key.The `private key` was to be replaced in the environment variables.Before obtaining the private key my devnet deployment ran with an error<br>
 ![deploy error](../campaign3/pictures/unfunded_devnet.png)
 
-### *How I fixed the Devnet Deployment Issue
+### How I fixed the Devnet Deployment Issue
 
  Obtained private key from pre-funded accounts.Then replaced the private key into my environment variables.Deployment was a success!
 
@@ -41,7 +41,7 @@ I tried to deploy the Contract in the Testnet Network.Had alot of errors before 
 
 Insufficient Testnet faucets to deploy and no address to be funded.<br>![testnet error](../campaign3/pictures/testnetIssue.png)
 
-### *How I fixed the Testnet Deployment Issue
+### How I fixed the Testnet Deployment Issue
 
 1.**[Generate Address for Testnet](https://docs.nervos.org/docs/sdk-and-devtool/rust)**: I Researched on how to obtain a new address for funding from the referrence.Discovered that you need Testnet Faucets for the address generated before deployment.Obtained my faucets at **[Faucets](https://faucet.nervos.org/)** 
 2.Changed the devnet variable to testnet in `package.json` under network and in my environment variables.
