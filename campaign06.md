@@ -41,5 +41,5 @@ Having fixed the negotiating funding stuck issue the status changed to a number 
 
 #### D.Send a  CKB Keysend Payment
 After the Channel was successfully on its Ready state, the `send payment` button automatically activated itself allow me to send some ckb to the peer.The send payment was a ssuccess.
-![send payment](ckb_fiberImages\send_payments.png)
+![send payment](ckb_fiberImages\send_payment.png)
 
