@@ -26,7 +26,7 @@ In Fiber, a multi-hop payment takes place through four phases: `pathfinding`, `o
 ## Proofs for The Multi-Hop Invoice Payment.
 ### 1.Setup Sender and Receiver.
 I reused my saved nodes, so there was no fresh  setup.Waited for the nodes to be running.I treated `Sender A` and `Receiver C` as two separate entities, each with its own node and funds.
-![Prepare the Browser Node](Campaign7\step1.png)
+![Prepare the Browser Node](../Campaign7\step1.png)
 
 ### 2.Waiting For Channel State && Funding Testnet Address.
 I waited for the channel state to show `Channel_Ready`, then proceeded to funding the Testnet address with Testnet CKB from [CKB_Faucets](https://faucet.nervos.org/).
