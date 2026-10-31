@@ -26,35 +26,35 @@ In Fiber, a multi-hop payment takes place through four phases: `pathfinding`, `o
 ## Proofs for The Multi-Hop Invoice Payment.
 ### 1.Setup Sender and Receiver.
 I reused my saved nodes, so there was no fresh  setup.Waited for the nodes to be running.I treated `Sender A` and `Receiver C` as two separate entities, each with its own node and funds.
-![Prepare the Browser Node](../Campaign7\step1.png)
+![Prepare the Browser Node](./campaign7\step1.png)
 
 ### 2.Waiting For Channel State && Funding Testnet Address.
 I waited for the channel state to show `Channel_Ready`, then proceeded to funding the Testnet address with Testnet CKB from [CKB_Faucets](https://faucet.nervos.org/).
-![Awaiting Channel State](Campaign7\step2.png)
+![Awaiting Channel State](./campaign7\step2.png)
 
 ### 3.Channel_Ready
 Before creating the Invoice, I waited until both the `A-B` and `C-B` Channels showed `CHANNEL-READY,checked the Liquidity bars which showed that on the A to Bottle B, Outbound from A was `400CKB`and Inbound to A was `151CKB`. On the Bottle B to C bar,Inbound to C was `151CKB` and outbound from C was `400CKB`. Sender A could send up to 400CKB,but onlyy 151CKB sat on Bottle B to C.
-![Channel_Ready State](Campaign7\step3.png)
+![Channel_Ready State](./campaign7\step3.png)
 
 
 ### 4.Invoice Created && Payment is Pending
 Receiver C created a 1 CKB invoice with the payment flow showing **Sender A -> Bottle B-> Receiver C** and the Invoice status to be open with the page showing a `Payment Pending`.
-![Pending Payment](Campaign7\step4.png)
+![Pending Payment](./campaign7\step4.png)
 
 ### 5.Payment Completed Successfully
 The payment went through successfully.The page showed Payment completed, 1 CKB received by C, and the invoice flipped from`Open` to `Paid`. The routing fee came out at 0.005 CKB against a 1 CKB maximum.
-![Payment Completed](Campaign7\step5.png)
+![Payment Completed](./campaign7\step5.png)
 
 ## Quest Two: Restore Receiving Liquidity.
 ### 1.Restore Receiving Liquidity.
 I returned to the `Create Invoice` button then using the `Create another Invoice` i opened the `Restore Receiving liquidity` set my return amount to 1CKB,reviewed the routing-fee allowance before sending it back to A.
-![Restoring Receiving Liquidity](Campaign7\step6.png)
+![Restoring Receiving Liquidity](./campaign7\step6.png)
 
 ## What the liquidity bars showed.
 When I opened the `Restore Liquidity` button,i realised the liquidity bars for reversing the payment direction was abit different. The outbound from `A` had dropped from `400CKB to 397.975CKB`.The reverse payment increases Bottle’s liquidity toward C, allowing C to receive more payments.This moves existing funds and incur routing fees. The Inbound to A now registered an increase to `153.025CKB`.Inbound to C became `149.015CKB` while the outbound from C became `401.985CKB`. 
 
 ### 2.Liquidity Restored && 1CKB Received by A
-![Liquidity Restored](Campaign7\step7.png)
+![Liquidity Restored](./campaign7\step7.png)
 
 ## Key-Learning
 ### 1.How The Available Liquidity is calculated
